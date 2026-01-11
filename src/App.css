@@ -7,15 +7,15 @@
 :root {
   --primary-color: #7c3aed;
   --primary-dark: #5b21b6;
-  --secondary-color: #db2777;
+  --secondary-color: #975875;
   --accent-color: #f472b6;
   --text-color: #e2e8f0;
   --light-text: #94a3b8;
   --background: #0f172a;
   --section-bg: #1e293b;
   --card-bg: #1e293b;
-  --gradient-start: #7c3aed;
-  --gradient-end: #db2777;
+  --gradient-start: #2b2633;
+  --gradient-end: #975875;
   --nav-bg: rgba(15, 23, 42, 0.8);
   --card-border: rgba(148, 163, 184, 0.1);
 }
@@ -39,6 +39,12 @@ body {
   transform: translateY(0);
 }
 
+/* mobile responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -47,7 +53,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
+  padding: 1rem 5%;
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -108,7 +114,7 @@ body {
 
   display: flex;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 4%;
   position: relative;
   overflow: hidden;
 }
@@ -248,7 +254,7 @@ body {
 
 .floating-card {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0rem;
   right: -2rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);

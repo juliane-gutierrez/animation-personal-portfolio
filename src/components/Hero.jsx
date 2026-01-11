@@ -40,11 +40,11 @@ export const Hero = () => {
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
           >
-            PedroTech
+            Juliane Gutierrez
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
             {" "}
-            Creative Developer & Designer
+            Software Developer & QA
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
             I craft beautiful digital experiences that combine stunning design
@@ -72,15 +72,15 @@ export const Hero = () => {
             </motion.a>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://github.com" target="_blank">
+            <motion.a href="https://github.com/juliane-gutierrez" target="_blank">
               <i className="fab fa-github"> </i>
             </motion.a>
-            <motion.a href="https://linkedin.com" target="_blank">
+            <motion.a href="https://linkedin.com/juliane-gutierrez-41718252" target="_blank">
               <i className="fab fa-linkedin"> </i>
             </motion.a>
-            <motion.a href="https://twitter.com" target="_blank">
+            {/* <motion.a href="https://twitter.com" target="_blank">
               <i className="fab fa-twitter"> </i>
-            </motion.a>
+            </motion.a>*/}
           </motion.div>
         </motion.div>
 
@@ -105,21 +105,24 @@ export const Hero = () => {
               style={vscDarkPlus}
             >
               {`const aboutMe: DeveloperProfile = {
-  codename: "PedroTech",
-  origin: "🌍 Somewhere between a coffee shop and a terminal",
-  role: "Fullstack Web Sorcerer",
+  codename: "JulianeGutierrez",
+  origin: "🌍 Brasil with an S",
+  role: "Transitioning into the marvelous tech world!",
   stack: {
-    languages: ["JavaScript", "TypeScript", "SQL"],
-    frameworks: ["React", "Next.js", "TailwindCSS", "Supabase"],
+    languages: ["HTML", "CSS", "JavaScript", "Python"],
+    frameworks: ["React", "Next.js", "TailwindCSS", 
+    "Django", "Bootstrap"],
+    tools: ["Git & GitHub", "VSCode", "Insomnia", 
+    "Heroku", "Netlify"],
   },
   traits: [
-    "pixel-perfectionist",
-    "API whisperer",
+    "super detail oriented",
+    "bug detector",
     "dark mode advocate",
-    "terminal aesthetic enthusiast",
+    "terminal aesthetic enthusiast"
   ],
   missionStatement:
-    "Turning ideas into interfaces and bugs into feature",
+    "Turning ideas into programs"
   availability: "Available for hire",
 };`}
             </SyntaxHighlighter>
