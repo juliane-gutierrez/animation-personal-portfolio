@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -15,6 +16,7 @@ const staggerContainer = {
 };
 
 export const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);  {/* This state tracks if the mobile menu is open. */}
   return (
     <motion.nav
       className="navbar"
@@ -29,33 +31,54 @@ export const Navbar = () => {
       >
         Portfolio
       </motion.div>
+      <div
+        className="hamburger"
+        onClick={() => setMenuOpen((prev) => !prev)}
+        style={{ cursor: "pointer", zIndex: 1100 }}
+      >
+        {/* Hamburger Icon Clickable, This toggles the menu open/closed when clicked. */}
+        <i className="fas fa-bars"></i>
+      </div>
 
       <motion.ul
-        className="nav-links"
+        className={`nav-links${menuOpen ? " mobile-open" : ""}`}
         variants={staggerContainer}
         initial="initial"
         animate="animate"
+        style={menuOpen ? {
+          display: "flex",
+          flexDirection: "column",
+          position: "absolute",
+          top: "100%",
+          right: 0,
+          background: "var(--nav-bg)",
+          width: "100vw",
+          padding: "2rem 0",
+          boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+          zIndex: 1000,
+        } : {}}
       >
+        {/* This makes the nav links appear as a vertical dropdown when the menu is open on mobile */}
         <motion.li
           variants={fadeInUp}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#home"> Home</a>
+          <a href="#home" onClick={() => setMenuOpen(false)}> Home</a> {/*This closes the menu when a link is clicked.*/}
         </motion.li>
         <motion.li
           variants={fadeInUp}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#projects"> Projects</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}> Projects</a>
         </motion.li>
         <motion.li
           variants={fadeInUp}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#contact"> Contact</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}> Contact</a>
         </motion.li>
       </motion.ul>
     </motion.nav>

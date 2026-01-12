@@ -41,9 +41,15 @@ body {
 
 /* mobile responsive */
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
   .hamburger {
     display: flex;
   }
+}
+.hamburger {
+  display: none;
 }
 .navbar {
   position: fixed;
