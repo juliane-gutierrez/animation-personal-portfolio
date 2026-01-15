@@ -41,12 +41,6 @@ Contact Form
 
 Deployed on Netlify
 
-### Deploy on Vercel
-
-1. Push your code to GitHub
-2. Go to [Vercel](https://vercel.com/) and import your repo
-3. Add your EmailJS keys as Environment Variables in Vercel dashboard
-4. Click **Deploy** — your live portfolio will be online in moments!
 
 ---
 
