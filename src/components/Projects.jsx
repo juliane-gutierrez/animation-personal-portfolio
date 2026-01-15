@@ -105,9 +105,10 @@ export const Projects = () => {
             </p>
             <div className="project-tech">
               <span>React</span>
+              <span>Vite</span>
               <span>Framer Motion</span>
               <span>EmailJS</span>
-              <span>CSS</span>
+              <span>Tailwind CSS</span>
             </div>
           </motion.div>
         </a> 
