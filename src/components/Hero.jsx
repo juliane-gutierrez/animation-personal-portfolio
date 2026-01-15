@@ -44,7 +44,7 @@ export const Hero = () => {
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
             {" "}
-            Software Developer & QA
+            Software Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
             She Codes Plus 2025 Alumni and completing a Diploma of Information Technology 
