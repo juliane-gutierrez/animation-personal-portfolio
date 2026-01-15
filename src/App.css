@@ -201,7 +201,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
+  min-width: 180px;
   height: 2.5rem;
   box-sizing: border-box;
 }
@@ -255,6 +255,7 @@ body {
 .social-links {
   display: flex;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .social-links a {
@@ -367,12 +368,15 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
-    padding-top: 80px;
+    padding-top: 60px;
   }
   .hero-content {
     text-align: center;
     max-width: 100%;
     padding: 0 1rem;
+  }
+  .hero-badge {
+    margin-top: 60px;
   }
   .glitch {
     font-size: 2.2rem;
@@ -392,14 +396,15 @@ body {
   .cta-buttons {
     flex-direction: column;
     gap: 1rem;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     margin-bottom: 2rem;
   }
   .cta-primary,
   .cta-secondary {
     width: 100%;
-    min-width: 0;
+    min-width: unset;
     margin-bottom: 0;
     box-sizing: border-box;
   }
@@ -468,8 +473,9 @@ body {
 }
 
 .project-image {
-  height: 240px;
-  background-size: cover;
+  height: 280px;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
   overflow: hidden;
