@@ -47,9 +47,12 @@ export const Hero = () => {
             Software Developer & QA
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            I craft beautiful digital experiences that combine stunning design
-            with powerful functionality. Specializing in modern web applications
-            and interactive user interfaces.
+            She Codes Plus 2025 Alumni and completing a Diploma of Information Technology 
+            (Web Development). With 10+ year background in client relations, 
+            digital operations, and systems administration to effectively manage technical 
+            workflows and deliver high-quality support. Constinuosly growing skill set multiple 
+            programming languages, frameworks and supporting tools with proven strengths in 
+            problem-solving, documentation, and process efficiency in dynamic, high-stakes environments. 
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
@@ -75,7 +78,7 @@ export const Hero = () => {
             <motion.a href="https://github.com/juliane-gutierrez" target="_blank">
               <i className="fab fa-github"> </i>
             </motion.a>
-            <motion.a href="https://linkedin.com/juliane-gutierrez-41718252" target="_blank">
+            <motion.a href="https://www.linkedin.com/in/juliane-gutierrez-41718252/" target="_blank">
               <i className="fab fa-linkedin"> </i>
             </motion.a>
             {/* <motion.a href="https://twitter.com" target="_blank">

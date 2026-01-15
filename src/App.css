@@ -39,12 +39,14 @@ body {
   transform: translateY(0);
 }
 
-/* mobile responsive */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
+.hamburger {
+  display: none;
+  align-items: center;
+  font-size: 2rem;
+  margin-left: 1.5rem; /* Add space between hamburger and logo */
 }
+
+/* mobile responsive */
 .navbar {
   position: fixed;
   top: 0;
@@ -66,6 +68,7 @@ body {
   font-weight: 700;
   color: var(--accent-color);
   text-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
+  margin-right: 1.5rem; /* Add space between logo and hamburger */
 }
 
 .nav-links {
@@ -171,14 +174,23 @@ body {
 }
 
 .cta-buttons {
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cta-buttons {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  gap: 1.5rem;
   margin-bottom: 2rem;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .cta-primary,
 .cta-secondary {
-  padding: 0.8rem 2rem;
+  padding: 0 1.5rem;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
@@ -189,7 +201,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
+  min-width: 180px;
+  height: 2.5rem;
+  box-sizing: border-box;
 }
 
 .cta-primary {
@@ -205,6 +219,7 @@ body {
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
   border: 2px solid white;
   backdrop-filter: blur(5px);
+  min-width: 180px; /* Make Contact Me button a bit wider to match View My Work visually */
 }
 
 .cta-secondary:hover {
@@ -240,6 +255,7 @@ body {
 .social-links {
   display: flex;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .social-links a {
@@ -254,8 +270,8 @@ body {
 
 .floating-card {
   position: absolute;
-  bottom: 0rem;
-  right: -2rem;
+  bottom: -1.5rem;
+  right: 1rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 1rem 1.5rem;
@@ -306,7 +322,16 @@ body {
   }
 
   .cta-buttons {
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .cta-primary {
+    margin-left: 1rem;
   }
 
   .social-links {
@@ -315,8 +340,73 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Navbar/Hamburger */
+  .nav-links {
+    display: none !important;
+  }
+  .nav-links.mobile-open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: var(--nav-bg);
+    width: 100vw;
+    padding: 2rem 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    gap: 2rem;
+    align-items: center;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 60px;
+  }
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .hero-badge {
+    margin-top: 60px;
+  }
+  .glitch {
+    font-size: 2.2rem;
+    word-break: break-word;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
   .hero-image-container {
     display: none;
+  }
+
+  /* CTA Buttons Responsive */
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    min-width: unset;
+    margin-bottom: 0;
+    box-sizing: border-box;
   }
 }
 
@@ -383,11 +473,13 @@ body {
 }
 
 .project-image {
-  height: 240px;
-  background-size: cover;
+  height: 280px;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
 .project-image::after {

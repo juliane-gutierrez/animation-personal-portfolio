@@ -39,28 +39,81 @@ export const Projects = () => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <motion.div
-          className="project-card"
-          variants={fadeInUp}
-          whileHover={{ y: -10, transition: { duration: 0.2 } }}
+{/* save point app */}
+
+        <a
+          href="https://save-point.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
         >
           <motion.div
-            className="project-image"
-            style={{ backgroundImage: "url('/projects/ai-saas.png')" }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-          />
-          <h3> AI SaaS Platform</h3>
-          <p>
-            A modern SaaS platform built with Next.js and OpenAI integration,
-            featuring real-time AI-powered content generation and analytics.
-          </p>
-          <div className="project-tech">
-            <span>Next.js</span>
-            <span>OpenAI</span>
-            <span>TailwindCSS</span>
-          </div>
-        </motion.div>
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{ backgroundImage: "url('/projects/save-point-logo-purple.png')" }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            />
+            <h3> Save Point</h3>
+            <p>
+              A app created as a group project for the She Codes Plus Australia 2025
+              using MVP and Agile method to create a retrospective board enabling our 
+              client, a VP for an online gaming company, to capture feedbacks, 
+              participate on live voting, and track action items. All synced live 
+              across participants via WebSockets. This project is now licenced under the MIT License.
+            </p>
+            <div className="project-tech">
+              <span>Django DRF</span>
+              <span>React.JS</span>
+              <span>HTML & CSS</span>
+              <span>SQLite</span>
+              <span>Heroku</span>
+              <span>Netlify</span>
+            </div>
+          </motion.div>
+        </a>
 
+
+{/* Portfolio Website */} 
+
+        <a
+          href="https://github.com/juliane-gutierrez/animation-personal-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "contents" }}
+        >
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('/projects/portfolio-img.png')",
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+            <h3>Personal Portfolio</h3>
+            <p>
+              This exact website you're on now! Framer Motion was used for animations,
+              specially for hovering. EmailJS to handle the contact form.
+            </p>
+            <div className="project-tech">
+              <span>React</span>
+              <span>Vite</span>
+              <span>Framer Motion</span>
+              <span>EmailJS</span>
+              <span>Tailwind CSS</span>
+            </div>
+          </motion.div>
+        </a> 
+        
+{/* Weather App JS */}
         <motion.div
           className="project-card"
           variants={fadeInUp}
@@ -69,47 +122,166 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/social-media.png')",
+              backgroundImage: "url('/projects/weather-app.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           />
-          <h3>Social Media Dashboard</h3>
+          <h3>Weather App</h3>
           <p>
-            A comprehensive social media management dashboard with analytics,
-            scheduling, and engagement tracking features.
+            A weather app created using Vanilla JavaScript. 
           </p>
           <div className="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
           </div>
         </motion.div>
+        
 
-        <motion.div
-          className="project-card"
-          variants={fadeInUp}
-          whileHover={{ y: -10, transition: { duration: 0.2 } }}
+{/* Multiple JS Projects */}
+
+        <a
+          href="https://github.com/juliane-gutierrez/equinim-college-javascript"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "contents" }}
         >
           <motion.div
-            className="project-image"
-            style={{
-              backgroundImage: "url('/projects/stopwatch.png')",
-            }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          />
-          <h3>Productivity Timer</h3>
-          <p>
-            A sleek productivity timer application with customizable work
-            sessions, statistics tracking, and dark mode support.
-          </p>
-          <div className="project-tech">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>TailwindCSS</span>
-          </div>
-        </motion.div>
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('/projects/img_javascript.jpg')",
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+            <h3>Multiple JavaScript Projects</h3>
+            <p>
+              This clickable card takes you to my GitHub page with multiple 
+              small apps and projects made using JavaScript. Calculator, Traffic Light,
+              BMI Script and more to come.
+            </p>
+            <div className="project-tech">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </motion.div>
+        </a>
+
+{/* TO ADD SKYWINGS WEBSITE  
+
+        <a
+          href="https://github.com/juliane-gutierrez/equinim-college-javascript"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "contents" }}
+        >
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('/projects/img_javascript.jpg')",
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+            <h3>Multiple JavaScript Projects</h3>
+            <p>
+              This clickable card takes you to my GitHub page with multiple 
+              small apps and projects made using JavaScript. Calculator, Traffic Light,
+              BMI Script and more to come.
+            </p>
+            <div className="project-tech">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </motion.div>
+        </a> 
+        */}
+
+{/* TO ADD django/react she codes once fixed 
+
+        <a
+          href="https://github.com/juliane-gutierrez/equinim-college-javascript"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "contents" }}
+        >
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('/projects/img_javascript.jpg')",
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+            <h3>Multiple JavaScript Projects</h3>
+            <p>
+              This clickable card takes you to my GitHub page with multiple 
+              small apps and projects made using JavaScript. Calculator, Traffic Light,
+              BMI Script and more to come.
+            </p>
+            <div className="project-tech">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </motion.div>
+        </a> 
+        */}
+
+{/* TO ADD haru's creche
+
+        <a
+          href="https://github.com/juliane-gutierrez/equinim-college-javascript"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "contents" }}
+        >
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('/projects/img_javascript.jpg')",
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+            <h3>Multiple JavaScript Projects</h3>
+            <p>
+              This clickable card takes you to my GitHub page with multiple 
+              small apps and projects made using JavaScript. Calculator, Traffic Light,
+              BMI Script and more to come.
+            </p>
+            <div className="project-tech">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </motion.div>
+        </a> 
+        */}
+
       </motion.div>
     </motion.section>
   );
