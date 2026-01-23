@@ -114,6 +114,12 @@ export const Projects = () => {
         </a> 
         
 {/* Weather App JS */}
+        <a 
+        href="https://weather-app-js-juliane.onrender.com"
+        target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "contents" }}
+        >
         <motion.div
           className="project-card"
           variants={fadeInUp}
@@ -129,14 +135,26 @@ export const Projects = () => {
           />
           <h3>Weather App</h3>
           <p>
-            A weather app created using Vanilla JavaScript. 
+            I built a weather app with vanilla JavaScript, HTML, and CSS for 
+            the frontend. For security, I added an Express.js backend server 
+            that handles API calls. This way, my OpenWeatherMap API key is 
+            protected on the server using environment variables and never 
+            exposed to users. The app communicates with the backend via a 
+            simple /api/weather endpoint instead of calling the API directly 
+            from the browser.
           </p>
           <div className="project-tech">
-            <span>JavaScript</span>
+            <span>Express.js</span>
             <span>HTML</span>
             <span>CSS</span>
+            <span>API</span>
+            <span>Dotenv</span>
+            <span>CORS</span>
+            <span>Node.js</span>
+            <span>Render</span>
           </div>
         </motion.div>
+        </a>
         
 
 {/* Multiple JS Projects */}
