@@ -50,7 +50,7 @@ export const Hero = () => {
             She Codes Plus 2025 Alumni and completing a Diploma of Information Technology 
             (Web Development). With 10+ year background in client relations, 
             digital operations, and systems administration to effectively manage technical 
-            workflows and deliver high-quality support. Constinuosly growing skill set multiple 
+            workflows and deliver high-quality support. Continuosly growing skill set multiple 
             programming languages, frameworks and supporting tools with proven strengths in 
             problem-solving, documentation, and process efficiency in dynamic, high-stakes environments. 
           </motion.p>
