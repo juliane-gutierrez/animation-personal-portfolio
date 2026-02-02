@@ -59,11 +59,12 @@ export const Projects = () => {
             />
             <h3> Save Point</h3>
             <p>
-              A app created as a group project for the She Codes Plus Australia 2025
-              using MVP and Agile method to create a retrospective board enabling our 
-              client, a VP for an online gaming company, to capture feedbacks, 
-              participate on live voting, and track action items. All synced live 
-              across participants via WebSockets. This project is now licenced under the MIT License.
+              A collaborative group project built for She Codes Plus Australia 2025. 
+              Save Point is a real-time retrospective board developed using Agile methodology 
+              and MVP principles for a VP at an online gaming company. It supports live voting, 
+              feedback capture, and action tracking, with real-time updates powered by WebSockets. 
+              Licensed under the MIT License.
+
             </p>
             <div className="project-tech">
               <span>Django DRF</span>
@@ -100,8 +101,9 @@ export const Projects = () => {
             />
             <h3>Personal Portfolio</h3>
             <p>
-              This exact website you're on now! Framer Motion was used for animations,
-              specially for hovering. EmailJS to handle the contact form.
+              This personal portfolio website showcases my projects and skills, with 
+              smooth UI animations built using Framer Motion and a functional contact 
+              form powered by EmailJS.
             </p>
             <div className="project-tech">
               <span>React</span>
@@ -180,9 +182,10 @@ export const Projects = () => {
             />
             <h3>Multiple JavaScript Projects</h3>
             <p>
-              This clickable card takes you to my GitHub page with multiple 
-              small apps and projects made using JavaScript. Calculator, Traffic Light,
-              BMI Script and more to come.
+              A collection of small JavaScript projects hosted on GitHub, 
+              including a calculator, traffic light simulation, BMI calculator, 
+              and more. These projects focus on core JavaScript concepts and 
+              practical problem-solving.
             </p>
             <div className="project-tech">
               <span>JavaScript</span>

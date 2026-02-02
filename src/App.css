@@ -24,6 +24,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background: var(--background);
+  overflow-x: hidden;
 }
 
 .app {
@@ -48,10 +49,7 @@ body {
 
 /* mobile responsive */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +59,7 @@ body {
   z-index: 1000;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid var(--card-border);
+  width: 100%;
 }
 
 .logo {
@@ -130,7 +129,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 0;
 }
 
 .hero-content {
@@ -147,6 +146,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   margin-bottom: 1.5rem;
+  margin-top: 2rem;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -313,7 +313,7 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
-    padding-top: 120px;
+    padding-top: 0;
   }
 
   .hero-content {
@@ -343,24 +343,43 @@ body {
   /* Navbar/Hamburger */
   .nav-links {
     display: none !important;
-  }
-  .nav-links.mobile-open {
-    display: flex !important;
-    flex-direction: column;
     position: absolute;
     top: 100%;
-    right: 0;
     left: 0;
-    background: var(--nav-bg);
-    width: 100vw;
+    right: 0;
+    background: rgba(15, 23, 42, 0.98);
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
     padding: 2rem 0;
+    margin: 0;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    z-index: 999;
     gap: 2rem;
+    list-style: none;
+    border-bottom: 1px solid var(--card-border);
     align-items: center;
   }
+  
+  .nav-links.mobile-open {
+    display: flex !important;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    pointer-events: auto !important;
+  }
+  
+  .nav-links a {
+    pointer-events: auto !important;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  
   .hamburger {
-    display: flex;
+    display: flex !important;
+    pointer-events: auto !important;
+    z-index: 1001;
   }
 
   /* Hero Section */
@@ -368,7 +387,7 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
-    padding-top: 60px;
+    padding-top: 0;
   }
   .hero-content {
     text-align: center;

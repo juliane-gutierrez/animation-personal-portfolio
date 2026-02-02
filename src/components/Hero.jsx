@@ -52,12 +52,12 @@ export const Hero = () => {
             Software Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            I'm a She Codes Plus 2025 Alumni and Diploma of Information Technology 
-            (Web Development - ongoing). With 10+ year background in client relations, 
-            digital operations, and systems administration to effectively manage technical 
-            workflows and deliver high-quality support. Continuously growing skill set in multiple 
-            programming languages, frameworks and supporting tools with proven strengths in 
-            problem-solving, documentation, and process efficiency in dynamic, high-stakes environments. 
+          She Codes Plus 2025 Alumni currently completing a Diploma of Information Technology (Web Development).
+          With over 10 years of experience in client relations, digital operations, and systems administration, 
+          I effectively manage technical workflows and deliver high-quality support.
+          <br></br>
+          I am continuously expanding my skill set across multiple programming languages, frameworks, and tools, 
+          with strengths in problem-solving, documentation, and process improvement in fast-paced environments.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
@@ -118,10 +118,10 @@ export const Hero = () => {
               {`const aboutMe: DeveloperProfile = {
   codename: "JulianeGutierrez",
   origin: "🌍 Brasil with an S",
-  role: "Transitioning into the marvelous tech world!",
+  role: "Early-career Software Developer",
   stack: {
     languages: ["HTML", "CSS", "JavaScript", "Python"],
-    frameworks: ["React", "Next.js", "TailwindCSS", 
+    frameworks: ["React", "Next.js", "Express.js", "TailwindCSS", 
     "Django", "Bootstrap"],
     tools: ["Git & GitHub", "VSCode", "Insomnia", 
     "Heroku", "Netlify"],
