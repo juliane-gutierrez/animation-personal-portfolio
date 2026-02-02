@@ -1,6 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useState } from "react";
+import { ResumeForm } from "./ResumeForm";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -17,6 +19,8 @@ const staggerContainer = {
 };
 
 export const Hero = () => {
+  const [showResumeForm, setShowResumeForm] = useState(false);
+
   return (
     <motion.section
       id="home"
@@ -24,6 +28,7 @@ export const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
+      style={{ position: "relative" }}
     >
       <div className="hero-container">
         <motion.div
@@ -47,32 +52,35 @@ export const Hero = () => {
             Software Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            She Codes Plus 2025 Alumni and completing a Diploma of Information Technology 
-            (Web Development). With 10+ year background in client relations, 
+            I'm a She Codes Plus 2025 Alumni and Diploma of Information Technology 
+            (Web Development - ongoing). With 10+ year background in client relations, 
             digital operations, and systems administration to effectively manage technical 
-            workflows and deliver high-quality support. Continuosly growing skill set multiple 
+            workflows and deliver high-quality support. Continuously growing skill set in multiple 
             programming languages, frameworks and supporting tools with proven strengths in 
             problem-solving, documentation, and process efficiency in dynamic, high-stakes environments. 
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
-            <motion.a
-              href="#projects"
-              className="cta-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {" "}
-              View My Work
+            <motion.a href="#projects" className="cta-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              Projects
             </motion.a>
             <motion.a
-              href="#contacts"
+              href="#contact"
               className="cta-secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Contact Me
             </motion.a>
+            <motion.button
+              onClick={() => setShowResumeForm(true)}
+              className="cta-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              as="button"
+            >
+              Resume
+            </motion.button>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
             <motion.a href="https://github.com/juliane-gutierrez" target="_blank">
@@ -146,6 +154,11 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      <AnimatePresence>
+        {showResumeForm && (
+          <ResumeForm onClose={() => setShowResumeForm(false)} />
+        )}
+      </AnimatePresence>
     </motion.section>
   );
 };
