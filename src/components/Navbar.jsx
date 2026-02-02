@@ -45,18 +45,6 @@ export const Navbar = () => {
         variants={staggerContainer}
         initial="initial"
         animate="animate"
-        style={menuOpen ? {
-          display: "flex",
-          flexDirection: "column",
-          position: "absolute",
-          top: "100%",
-          right: 0,
-          background: "var(--nav-bg)",
-          width: "100vw",
-          padding: "2rem 0",
-          boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
-          zIndex: 1000,
-        } : {}}
       >
         {/* This makes the nav links appear as a vertical dropdown when the menu is open on mobile */}
         <motion.li

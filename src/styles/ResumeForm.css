@@ -1,0 +1,117 @@
+.resume-form-wrapper {
+  position: absolute;
+  right: 20rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.resume-form-container {
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 150, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  min-width: 320px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.resume-form-container h3 {
+  color: #64f4ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.resume-form-container p {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  
+}
+
+.resume-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume-form-container input {
+  padding: 0.75rem;
+  border: 1px solid rgba(100, 150, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.resume-form-container input:focus {
+  outline: none;
+  border-color: #64f4ff;
+  box-shadow: 0 0 10px rgba(100, 244, 255, 0.3);
+}
+
+.resume-form-container button {
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #64f4ff 0%, #0ea5e9 100%);
+  border: none;
+  border-radius: 8px;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume-form-container button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(100, 244, 255, 0.4);
+}
+
+.resume-form-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #64f4ff;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+  color: #0ea5e9;
+}
+
+.form-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(100, 244, 255, 0.1);
+  border-left: 3px solid #64f4ff;
+  color: #64f4ff;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-form-wrapper {
+    right: 1rem;
+    left: 1rem;
+    top: auto;
+    bottom: 2rem;
+    transform: none;
+  }
+
+  .resume-form-container {
+    min-width: unset;
+  }
+}
